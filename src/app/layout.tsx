@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import { Plus_Jakarta_Sans } from "next/font/google";
+import Script from "next/script";
 import "./globals.css";
 import { site } from "@/lib/site";
 
@@ -82,6 +83,13 @@ export default function RootLayout({
       </head>
       <body className="min-h-screen bg-ink-950 font-sans antialiased">
         {children}
+        <Script
+          src="https://widgets.leadconnectorhq.com/loader.js"
+          strategy="afterInteractive"
+          data-resources-url="https://widgets.leadconnectorhq.com/chat-widget/loader.js"
+          data-widget-id="6a08dcdff127bb2f808ebfa4"
+          data-source="WEB_USER"
+        />
       </body>
     </html>
   );
