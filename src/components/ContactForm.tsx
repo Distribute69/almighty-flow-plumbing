@@ -1,19 +1,8 @@
-"use client";
-
-import { useState, type FormEvent } from "react";
 import { FadeIn } from "@/components/ui/FadeIn";
-import { Button } from "@/components/ui/Button";
 import { PhoneIcon } from "@/components/icons/ServiceIcons";
-import { serviceOptions, site } from "@/lib/site";
+import { site } from "@/lib/site";
 
 export function ContactForm() {
-  const [submitted, setSubmitted] = useState(false);
-
-  const handleSubmit = (e: FormEvent<HTMLFormElement>) => {
-    e.preventDefault();
-    setSubmitted(true);
-  };
-
   return (
     <section id="contact" className="relative py-24 sm:py-32">
       <div className="pointer-events-none absolute inset-0 bg-gradient-to-b from-transparent via-accent/5 to-transparent" />
@@ -44,87 +33,34 @@ export function ContactForm() {
           </FadeIn>
 
           <FadeIn delay={0.1}>
-            {submitted ? (
-              <div
-                className="glass-card rounded-2xl p-10 text-center"
-                role="status"
-              >
-                <p className="text-2xl font-bold text-ink-fg">Message received</p>
+            <div className="glass-card space-y-6 rounded-2xl p-8 sm:p-10">
+              <div>
+                <p className="text-2xl font-bold text-ink-fg">Start your request</p>
                 <p className="mt-3 text-ink-muted">
-                  Thanks for reaching out. {site.owner.split(" ")[0]} or a team member will
-                  contact you shortly.
+                  Use the chat button on this page to send details about your plumbing issue,
+                  or call now if water is actively leaking, backing up, or shut off.
                 </p>
               </div>
-            ) : (
-              <form
-                onSubmit={handleSubmit}
-                className="glass-card space-y-5 rounded-2xl p-8 sm:p-10"
-              >
-                <label className="block">
-                  <span className="mb-2 block text-sm font-semibold text-ink-fg">
-                    Name *
-                  </span>
-                  <input
-                    name="name"
-                    required
-                    autoComplete="name"
-                    className="w-full rounded-xl border border-ink-700 bg-ink-800 px-4 py-3 text-ink-fg outline-none transition focus:border-accent focus:ring-2 focus:ring-accent/20"
-                  />
-                </label>
-                <label className="block">
-                  <span className="mb-2 block text-sm font-semibold text-ink-fg">
-                    Email *
-                  </span>
-                  <input
-                    name="email"
-                    type="email"
-                    required
-                    autoComplete="email"
-                    className="w-full rounded-xl border border-ink-700 bg-ink-800 px-4 py-3 text-ink-fg outline-none transition focus:border-accent focus:ring-2 focus:ring-accent/20"
-                  />
-                </label>
-                <label className="block">
-                  <span className="mb-2 block text-sm font-semibold text-ink-fg">
-                    Service Needed *
-                  </span>
-                  <select
-                    name="service"
-                    required
-                    className="w-full rounded-xl border border-ink-700 bg-ink-800 px-4 py-3 text-ink-fg outline-none transition focus:border-accent focus:ring-2 focus:ring-accent/20"
-                    defaultValue=""
-                  >
-                    <option value="" disabled>
-                      Select a service
-                    </option>
-                    {serviceOptions.map((opt) => (
-                      <option key={opt} value={opt}>
-                        {opt}
-                      </option>
-                    ))}
-                  </select>
-                </label>
-                <label className="block">
-                  <span className="mb-2 block text-sm font-semibold text-ink-fg">
-                    Message
-                  </span>
-                  <textarea
-                    name="message"
-                    rows={4}
-                    placeholder="Describe the issue or project..."
-                    className="w-full resize-none rounded-xl border border-ink-700 bg-ink-800 px-4 py-3 text-ink-fg outline-none transition focus:border-accent focus:ring-2 focus:ring-accent/20"
-                  />
-                </label>
-                <Button type="submit" className="w-full py-4 text-base">
-                  Submit Request
-                </Button>
-                <p className="text-xs leading-relaxed text-ink-muted">
-                  For text message updates, use the chat widget or call {site.phone}. By
-                  contacting Almighty Flow Plumbing through the chat widget, phone, or text,
-                  you agree to receive service-related messages about your inquiry. Message
-                  and data rates may apply. Message frequency varies. Reply STOP to opt out.
+
+              <div className="grid gap-3">
+                <a
+                  href={`tel:${site.phoneHref}`}
+                  className="inline-flex items-center justify-center gap-2 rounded-full bg-accent px-6 py-4 text-sm font-semibold tracking-wide text-white shadow-glow transition-all duration-300 hover:bg-accent-bright hover:shadow-glow-lg"
+                >
+                  <PhoneIcon className="h-5 w-5" />
+                  Call {site.phone}
+                </a>
+                <p className="text-center text-sm text-ink-muted">
+                  The chat widget appears in the lower corner of the page.
                 </p>
-              </form>
-            )}
+              </div>
+
+              <p className="text-xs leading-relaxed text-ink-muted">
+                By contacting Almighty Flow Plumbing through chat, phone, or text, you agree
+                to receive service-related messages about your inquiry. Message and data rates
+                may apply. Message frequency varies. Reply STOP to opt out.
+              </p>
+            </div>
           </FadeIn>
         </div>
       </div>
