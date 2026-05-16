@@ -60,31 +60,17 @@ export function ContactForm() {
                 onSubmit={handleSubmit}
                 className="glass-card space-y-5 rounded-2xl p-8 sm:p-10"
               >
-                <div className="grid gap-5 sm:grid-cols-2">
-                  <label className="block">
-                    <span className="mb-2 block text-sm font-semibold text-ink-fg">
-                      Name *
-                    </span>
-                    <input
-                      name="name"
-                      required
-                      autoComplete="name"
-                      className="w-full rounded-xl border border-ink-700 bg-ink-800 px-4 py-3 text-ink-fg outline-none transition focus:border-accent focus:ring-2 focus:ring-accent/20"
-                    />
-                  </label>
-                  <label className="block">
-                    <span className="mb-2 block text-sm font-semibold text-ink-fg">
-                      Phone *
-                    </span>
-                    <input
-                      name="phone"
-                      type="tel"
-                      required
-                      autoComplete="tel"
-                      className="w-full rounded-xl border border-ink-700 bg-ink-800 px-4 py-3 text-ink-fg outline-none transition focus:border-accent focus:ring-2 focus:ring-accent/20"
-                    />
-                  </label>
-                </div>
+                <label className="block">
+                  <span className="mb-2 block text-sm font-semibold text-ink-fg">
+                    Name *
+                  </span>
+                  <input
+                    name="name"
+                    required
+                    autoComplete="name"
+                    className="w-full rounded-xl border border-ink-700 bg-ink-800 px-4 py-3 text-ink-fg outline-none transition focus:border-accent focus:ring-2 focus:ring-accent/20"
+                  />
+                </label>
                 <label className="block">
                   <span className="mb-2 block text-sm font-semibold text-ink-fg">
                     Email *
@@ -131,6 +117,12 @@ export function ContactForm() {
                 <Button type="submit" className="w-full py-4 text-base">
                   Submit Request
                 </Button>
+                <p className="text-xs leading-relaxed text-ink-muted">
+                  For text message updates, use the chat widget or call {site.phone}. By
+                  contacting Almighty Flow Plumbing through the chat widget, phone, or text,
+                  you agree to receive service-related messages about your inquiry. Message
+                  and data rates may apply. Message frequency varies. Reply STOP to opt out.
+                </p>
               </form>
             )}
           </FadeIn>
