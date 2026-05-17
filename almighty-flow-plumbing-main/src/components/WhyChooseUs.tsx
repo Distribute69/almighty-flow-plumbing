@@ -10,8 +10,8 @@ export function WhyChooseUs() {
         <FadeIn>
           <SectionHeading
             eyebrow="Why Choose Us"
-            title="A higher standard for the work inside your home"
-            description="Premium is not noise. It is speed, clarity, clean work, and the confidence that every detail is handled."
+            title="Trust is built before the repair starts"
+            description="Premium service means the basics are handled well: fast response, clear communication, careful work, and no confusion about the next step."
             align="center"
             className="mx-auto"
           />

@@ -2,7 +2,7 @@ export const site = {
   name: "Almighty Flow Plumbing Co.",
   shortName: "Almighty Flow",
   owner: "Ethan Elliott",
-  tagline: "Premium plumbing for Greensboro homes & businesses",
+  tagline: "Fast-response plumbing, clean work, and reliable local service in Greensboro.",
   phone: "(336) 733-6541",
   phoneHref: "+13367336541",
   email: "ethan@almightyflow.com",
@@ -26,99 +26,93 @@ export const services = [
   {
     title: "Emergency Plumbing",
     description:
-      "Burst pipes, backups, and urgent leaks — rapid dispatch with fully equipped trucks to protect your property.",
+      "Rapid help for burst pipes, active leaks, backups, no-water calls, and urgent plumbing issues.",
     icon: "emergency",
   },
   {
     title: "Drain Cleaning",
     description:
-      "Professional clearing and camera inspections to restore flow without damaging your lines.",
+      "Clear stubborn clogs, slow drains, and backed-up lines with clean diagnostics and practical next steps.",
     icon: "drain",
   },
   {
-    title: "Water Heater Repair & Installation",
+    title: "Water Heater Service",
     description:
-      "Tank and tankless service, upgrades, and code-compliant installs for reliable hot water.",
+      "Repair, replacement, and installation support for tank and tankless water heater systems.",
     icon: "heater",
   },
   {
-    title: "Leak Detection",
+    title: "Leak Repair",
     description:
-      "Advanced diagnostics to find hidden leaks early — before they become costly structural damage.",
+      "Find and fix fixture leaks, pipe leaks, and hidden water issues before damage spreads.",
     icon: "leak",
   },
   {
-    title: "Sewer Line Services",
+    title: "Sewer & Main Lines",
     description:
-      "Line repair, replacement, and maintenance with modern methods that minimize disruption.",
+      "Main line stoppages, sewer concerns, and repair planning handled with clear communication.",
     icon: "sewer",
   },
   {
-    title: "Residential Plumbing",
+    title: "Fixture & Pipe Repair",
     description:
-      "Repairs, remodels, and fixture upgrades delivered with respect for your home and schedule.",
+      "Toilets, faucets, sinks, disposals, supply lines, and pipe repairs completed with a clean finish.",
     icon: "home",
-  },
-  {
-    title: "Commercial Plumbing",
-    description:
-      "Reliable maintenance and emergency response for offices, retail, and multi-unit properties.",
-    icon: "commercial",
   },
 ] as const;
 
 export const whyUs = [
   {
     title: "Fast Response Times",
-    description: "Same-day availability and true 24/7 emergency coverage when you need us most.",
+    description: "Clear intake, fast triage, and emergency availability when timing matters most.",
   },
   {
-    title: "Honest Communication",
-    description: "Clear options and upfront pricing — no pressure, no surprises on your invoice.",
+    title: "Upfront Communication",
+    description: "Clear options, appointment updates, and no-pressure recommendations before work starts.",
   },
   {
-    title: "Modern Technology",
-    description: "Camera inspections, precision diagnostics, and efficient repair methods.",
+    title: "Respect For Your Home",
+    description: "Clean work areas, protected surfaces, and crews that treat your space like it matters.",
   },
   {
-    title: "Reliable Service",
-    description: "Licensed work, quality parts, and workmanship you can count on long-term.",
+    title: "Licensed & Insured",
+    description: "Professional standards, careful documentation, and work built to hold up.",
   },
   {
-    title: "Customer Satisfaction",
-    description: "We treat every job like our reputation depends on it — because it does.",
+    title: "24/7 Emergency Service",
+    description: "When water is moving the wrong way, Almighty Flow is built to respond.",
   },
   {
-    title: "Locally Owned",
-    description: "Greensboro-based, community-focused, and invested in neighbors we serve.",
+    title: "Organized From First Contact",
+    description: "Modern intake, notes, and follow-up systems keep every request clear from start to finish.",
   },
 ] as const;
 
 export const reviews = [
   {
     quote:
-      "Ethan responded within the hour for a burst pipe. Professional, calm, and fixed everything the same day. Exactly the kind of plumber you want on speed dial.",
+      "They responded quickly, explained the issue clearly, and left the work area clean. Exactly what you want when plumbing goes wrong.",
     name: "Marcus T.",
     location: "Greensboro, NC",
     rating: 5,
   },
   {
     quote:
-      "Transparent pricing and zero upselling. They explained what failed, what we needed, and what could wait. Refreshing experience.",
+      "The communication stood out. I knew when they were coming, what they found, and what the repair would involve before anything moved forward.",
     name: "Danielle R.",
     location: "High Point, NC",
     rating: 5,
   },
   {
     quote:
-      "Our water heater was replaced cleanly and quickly. Floors protected, area spotless, and they walked us through maintenance tips.",
+      "Our water heater issue was handled fast and professionally. Clean work, respectful service, and no confusion.",
     name: "James W.",
     location: "Jamestown, NC",
     rating: 5,
   },
   {
     quote:
-      "Found a slab leak other companies missed. Modern equipment, clear photos, and a fair quote before any work started.",
+      "They treated a stressful leak like a process, not a panic. Quick response, clear photos, and a fair recommendation.",
     name: "Priya K.",
     location: "Summerfield, NC",
     rating: 5,

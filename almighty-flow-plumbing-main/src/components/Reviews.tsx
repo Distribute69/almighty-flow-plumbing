@@ -20,7 +20,8 @@ export function Reviews() {
         <FadeIn>
           <SectionHeading
             eyebrow="Reviews"
-            title="Trust that feels earned before the first wrench turns"
+            title="The kind of plumbing visit homeowners remember"
+            description="Responsive, clear, respectful, and focused on getting the issue handled without making the day harder."
             align="center"
             className="mx-auto"
           />

@@ -12,11 +12,12 @@ export function ContactForm() {
           <FadeIn>
             <p className="text-xs font-bold uppercase tracking-[0.26em] text-gold">Contact</p>
             <h2 className="mt-3 font-heading text-3xl font-black uppercase tracking-wide text-ink-fg sm:text-4xl">
-              Schedule premium plumbing service
+              Schedule plumbing service
             </h2>
             <p className="mt-4 text-lg text-ink-muted">
               For active leaks, sewer backups, or no-water emergencies, call now. For
-              scheduling, use the on-site chat and we&apos;ll collect the details cleanly.
+              non-emergency scheduling, use the on-site chat and we will collect the
+              details clearly.
             </p>
             <a
               href={`tel:${site.phoneHref}`}
@@ -37,11 +38,11 @@ export function ContactForm() {
             <div className="glass-card section-badge space-y-6 p-8 sm:p-10">
               <div>
                 <p className="font-heading text-2xl font-black uppercase tracking-wide text-ink-fg">
-                  Dispatch-ready intake
+                  Request service or a quote
                 </p>
                 <p className="mt-3 text-ink-muted">
-                  The request process captures the issue, urgency, address, and best
-                  appointment window so the next step is clear.
+                  Share the issue, urgency, address, and best appointment window so the
+                  next step is clear before anyone is dispatched.
                 </p>
               </div>
 

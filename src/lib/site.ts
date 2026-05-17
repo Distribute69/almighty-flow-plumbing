@@ -2,7 +2,7 @@ export const site = {
   name: "Almighty Flow Plumbing Co.",
   shortName: "Almighty Flow",
   owner: "Ethan Elliott",
-  tagline: "Luxury blue-collar plumbing for Greensboro homes & businesses",
+  tagline: "Fast-response plumbing, clean work, and reliable local service in Greensboro.",
   phone: "(336) 733-6541",
   phoneHref: "+13367336541",
   email: "ethan@almightyflow.com",
@@ -26,37 +26,37 @@ export const services = [
   {
     title: "Emergency Plumbing",
     description:
-      "Rapid response for burst pipes, backups, no-water calls, and urgent leaks that cannot wait.",
+      "Rapid help for burst pipes, active leaks, backups, no-water calls, and urgent plumbing issues.",
     icon: "emergency",
   },
   {
     title: "Drain Cleaning",
     description:
-      "Precision clearing, diagnostics, and camera-ready inspection workflows to restore flow cleanly.",
+      "Clear stubborn clogs, slow drains, and backed-up lines with clean diagnostics and practical next steps.",
     icon: "drain",
   },
   {
-    title: "Water Heaters",
+    title: "Water Heater Service",
     description:
-      "Tank and tankless repair, replacement, and upgrades built for reliable hot water.",
+      "Repair, replacement, and installation support for tank and tankless water heater systems.",
     icon: "heater",
   },
   {
-    title: "Leak Detection",
+    title: "Leak Repair",
     description:
-      "Advanced diagnostics to find hidden leaks early — before they become costly structural damage.",
+      "Find and fix fixture leaks, pipe leaks, and hidden water issues before damage spreads.",
     icon: "leak",
   },
   {
-    title: "Sewer Repair",
+    title: "Sewer & Main Lines",
     description:
-      "Modern sewer diagnosis, repair planning, and clear communication before major work begins.",
+      "Main line stoppages, sewer concerns, and repair planning handled with clear communication.",
     icon: "sewer",
   },
   {
-    title: "Repiping",
+    title: "Fixture & Pipe Repair",
     description:
-      "Clean pipe repair and repiping solutions for aging lines, remodels, and long-term reliability.",
+      "Toilets, faucets, sinks, disposals, supply lines, and pipe repairs completed with a clean finish.",
     icon: "home",
   },
 ] as const;
@@ -67,8 +67,8 @@ export const whyUs = [
     description: "Clear intake, fast triage, and emergency availability when timing matters most.",
   },
   {
-    title: "Transparent Pricing",
-    description: "Straight answers, clear options, and no-pressure recommendations before work starts.",
+    title: "Upfront Communication",
+    description: "Clear options, appointment updates, and no-pressure recommendations before work starts.",
   },
   {
     title: "Respect For Your Home",
@@ -83,36 +83,36 @@ export const whyUs = [
     description: "When water is moving the wrong way, Almighty Flow is built to respond.",
   },
   {
-    title: "Modern Technology",
-    description: "Diagnostics, photos, notes, and follow-up systems that keep every job organized.",
+    title: "Organized From First Contact",
+    description: "Modern intake, notes, and follow-up systems keep every request clear from start to finish.",
   },
 ] as const;
 
 export const reviews = [
   {
     quote:
-      "Ethan responded within the hour for a burst pipe. Professional, calm, and fixed everything the same day. Exactly the kind of plumber you want on speed dial.",
+      "They responded quickly, explained the issue clearly, and left the work area clean. Exactly what you want when plumbing goes wrong.",
     name: "Marcus T.",
     location: "Greensboro, NC",
     rating: 5,
   },
   {
     quote:
-      "Transparent pricing and zero upselling. They explained what failed, what we needed, and what could wait. Refreshing experience.",
+      "The communication stood out. I knew when they were coming, what they found, and what the repair would involve before anything moved forward.",
     name: "Danielle R.",
     location: "High Point, NC",
     rating: 5,
   },
   {
     quote:
-      "Our water heater was replaced cleanly and quickly. Floors protected, area spotless, and they walked us through maintenance tips.",
+      "Our water heater issue was handled fast and professionally. Clean work, respectful service, and no confusion.",
     name: "James W.",
     location: "Jamestown, NC",
     rating: 5,
   },
   {
     quote:
-      "Found a slab leak other companies missed. Modern equipment, clear photos, and a fair quote before any work started.",
+      "They treated a stressful leak like a process, not a panic. Quick response, clear photos, and a fair recommendation.",
     name: "Priya K.",
     location: "Summerfield, NC",
     rating: 5,

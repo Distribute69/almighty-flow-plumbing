@@ -1,6 +1,6 @@
 import Image from "next/image";
 import Link from "next/link";
-import { navLinks, site } from "@/lib/site";
+import { navLinks, serviceAreas, site } from "@/lib/site";
 
 function SocialIcon({
   href,
@@ -17,7 +17,7 @@ function SocialIcon({
       target="_blank"
       rel="noopener noreferrer"
       aria-label={label}
-    className="flex h-10 w-10 items-center justify-center rounded-full border border-white/14 bg-white/8 text-footer-fg transition-colors hover:border-accent hover:text-accent-bright"
+      className="flex h-10 w-10 items-center justify-center rounded-full border border-white/14 bg-white/8 text-footer-fg transition-colors hover:border-accent hover:text-accent-bright"
     >
       {children}
     </a>
@@ -31,18 +31,18 @@ export function Footer() {
     <footer className="relative overflow-hidden border-t border-white/10 bg-footer-bg pt-16 pb-8">
       <div className="absolute inset-0 metal-texture opacity-20" />
       <div className="mx-auto max-w-7xl px-5 sm:px-8">
-        <div className="grid gap-12 md:grid-cols-2 lg:grid-cols-4">
+        <div className="grid gap-12 md:grid-cols-2 lg:grid-cols-5">
           <div className="lg:col-span-1">
             <Image
               src="/logo.png"
               alt={site.name}
-              width={180}
-              height={56}
-              className="h-20 w-auto rounded-lg object-contain"
+              width={220}
+              height={90}
+              className="h-24 w-auto rounded-lg object-contain"
             />
             <p className="mt-4 text-sm leading-relaxed text-footer-fg">
-              Premium plumbing for {site.city}, {site.state}. Owner-operated by{" "}
-              {site.owner}.
+              Fast-response plumbing, clean work, and reliable local service for
+              {` ${site.city}, ${site.stateAbbr}`} and nearby communities.
             </p>
             <div className="mt-6 flex gap-3">
               <SocialIcon href="https://facebook.com" label="Facebook">
@@ -57,17 +57,17 @@ export function Footer() {
               </SocialIcon>
               <SocialIcon href="https://google.com" label="Google Business">
                 <svg className="h-4 w-4" fill="currentColor" viewBox="0 0 24 24" aria-hidden>
-                  <path d="M22.56 12.25c0-.78-.07-1.53-.2-2.25H12v4.26h5.92c-.26 1.37-1.04 2.53-2.21 3.31v2.77h3.57c2.08-1.92 3.28-4.74 3.28-8.09z" fill="#4285F4"/>
-                  <path d="M12 23c2.97 0 5.46-.98 7.28-2.66l-3.57-2.77c-.98.66-2.23 1.06-3.71 1.06-2.86 0-5.29-1.93-6.16-4.53H2.18v2.84C3.99 20.53 7.7 23 12 23z" fill="#34A853"/>
-                  <path d="M5.84 14.09c-.22-.66-.35-1.36-.35-2.09s.13-1.43.35-2.09V7.07H2.18C1.43 8.55 1 10.22 1 12s.43 3.45 1.18 4.93l2.85-2.22.81-.62z" fill="#FBBC05"/>
-                  <path d="M12 5.38c1.62 0 3.06.56 4.21 1.64l3.15-3.15C17.45 2.09 14.97 1 12 1 7.7 1 3.99 3.47 2.18 7.07l3.66 2.84c.87-2.6 3.3-4.53 6.16-4.53z" fill="#EA4335"/>
+                  <path d="M22.56 12.25c0-.78-.07-1.53-.2-2.25H12v4.26h5.92c-.26 1.37-1.04 2.53-2.21 3.31v2.77h3.57c2.08-1.92 3.28-4.74 3.28-8.09z" fill="#4285F4" />
+                  <path d="M12 23c2.97 0 5.46-.98 7.28-2.66l-3.57-2.77c-.98.66-2.23 1.06-3.71 1.06-2.86 0-5.29-1.93-6.16-4.53H2.18v2.84C3.99 20.53 7.7 23 12 23z" fill="#34A853" />
+                  <path d="M5.84 14.09c-.22-.66-.35-1.36-.35-2.09s.13-1.43.35-2.09V7.07H2.18C1.43 8.55 1 10.22 1 12s.43 3.45 1.18 4.93l2.85-2.22.81-.62z" fill="#FBBC05" />
+                  <path d="M12 5.38c1.62 0 3.06.56 4.21 1.64l3.15-3.15C17.45 2.09 14.97 1 12 1 7.7 1 3.99 3.47 2.18 7.07l3.66 2.84c.87-2.6 3.3-4.53 6.16-4.53z" fill="#EA4335" />
                 </svg>
               </SocialIcon>
             </div>
           </div>
 
           <div>
-            <h3 className="text-sm font-bold uppercase tracking-wider text-gold-soft">Navigate</h3>
+            <h3 className="text-sm font-bold uppercase tracking-wider text-gold-soft">Quick Links</h3>
             <ul className="mt-4 space-y-2">
               {navLinks.map((link) => (
                 <li key={link.href}>
@@ -80,21 +80,24 @@ export function Footer() {
                 </li>
               ))}
               <li>
-                <Link
-                  href="/privacy"
-                  className="text-sm text-footer-fg transition-colors hover:text-accent-bright"
-                >
+                <Link href="/privacy" className="text-sm text-footer-fg transition-colors hover:text-accent-bright">
                   Privacy Policy
                 </Link>
               </li>
               <li>
-                <Link
-                  href="/terms"
-                  className="text-sm text-footer-fg transition-colors hover:text-accent-bright"
-                >
+                <Link href="/terms" className="text-sm text-footer-fg transition-colors hover:text-accent-bright">
                   Terms
                 </Link>
               </li>
+            </ul>
+          </div>
+
+          <div>
+            <h3 className="text-sm font-bold uppercase tracking-wider text-gold-soft">Service Areas</h3>
+            <ul className="mt-4 grid grid-cols-1 gap-2 text-sm text-footer-fg">
+              {serviceAreas.slice(0, 8).map((area) => (
+                <li key={area}>{area}, NC</li>
+              ))}
             </ul>
           </div>
 
@@ -111,20 +114,22 @@ export function Footer() {
                   {site.email}
                 </a>
               </li>
-              <li>
-                {site.city}, {site.state}
-              </li>
-              <li>Owner: {site.owner}</li>
+              <li>{site.city}, {site.state}</li>
+              <li>Service by appointment</li>
             </ul>
           </div>
 
           <div>
             <h3 className="text-sm font-bold uppercase tracking-wider text-gold-soft">
-              Emergency?
+              Hours & Credentials
             </h3>
             <p className="mt-4 text-sm text-footer-fg">
-              Available 24/7 for urgent plumbing issues across Greensboro and surrounding
-              areas.
+              Emergency plumbing requests are prioritized 24/7. Standard scheduling is
+              available by appointment.
+            </p>
+            <p className="mt-3 text-sm text-footer-fg">
+              Licensed and insured plumbing fulfillment available through qualified service
+              partners.
             </p>
             <a
               href={`tel:${site.phoneHref}`}
@@ -137,7 +142,7 @@ export function Footer() {
 
         <div className="mt-12 border-t border-white/12 pt-8 text-center text-sm text-footer-fg">
           <p>
-            &copy; {year} {site.name} · {site.city}, {site.state}
+            &copy; {year} {site.name} - {site.city}, {site.state}
           </p>
         </div>
       </div>

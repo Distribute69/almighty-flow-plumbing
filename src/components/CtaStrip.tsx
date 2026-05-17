@@ -9,10 +9,10 @@ export function CtaStrip() {
       <div className="section-badge metal-panel relative mx-auto flex max-w-7xl flex-col items-center justify-between gap-8 px-6 py-10 text-center sm:px-10 md:flex-row md:text-left">
         <div>
           <h2 className="font-heading text-2xl font-black uppercase tracking-wide text-ink-fg sm:text-3xl">
-            Plumbing emergency? We&apos;re on it.
+            Plumbing problem? Get a clear next step.
           </h2>
           <p className="mt-2 text-ink-muted">
-            24/7 dispatch across {site.city} and surrounding areas.
+            Call for urgent service or send a request and we will help route the issue.
           </p>
         </div>
         <div className="flex flex-col gap-3 sm:flex-row">

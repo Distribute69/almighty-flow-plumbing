@@ -20,10 +20,10 @@ export function About() {
             <div className="absolute inset-0 bg-gradient-to-t from-ink-950/68 via-ink-950/14 to-transparent" />
             <div className="absolute bottom-0 left-0 right-0 p-6 sm:p-8">
               <p className="text-xs font-bold uppercase tracking-[0.26em] text-gold-soft">
-                Modern service model
+                Local plumbing. Modern process.
               </p>
               <p className="mt-1 font-heading text-2xl font-black uppercase tracking-wide text-white">
-                Organized from the first call
+                Organized before the first knock
               </p>
             </div>
             <div className="corner-bracket corner-bracket--tl" aria-hidden />
@@ -34,24 +34,24 @@ export function About() {
         <FadeIn delay={0.1}>
           <p className="text-xs font-bold uppercase tracking-[0.26em] text-gold">About Us</p>
           <h2 className="mt-3 font-heading text-3xl font-black uppercase tracking-wide text-ink-fg sm:text-4xl">
-            Built like a premium service brand. Run like a response team.
+            A cleaner plumbing experience for Greensboro homes.
           </h2>
           <p className="mt-6 text-lg leading-relaxed text-ink-muted">
-            {site.name} was founded by {site.owner} with a simple promise: show up fast,
-            communicate clearly, and deliver plumbing that lasts. Based in {site.city},{" "}
-            {site.stateAbbr}, the brand blends old-school craftsmanship with a modern
-            CRM-powered customer experience.
+            {site.name} is built around a simple standard: respond quickly,
+            communicate clearly, and leave the customer with confidence. Based in{" "}
+            {site.city}, {site.stateAbbr}, the company combines plumbing-first service
+            with organized intake, follow-up, and customer communication.
           </p>
           <p className="mt-4 leading-relaxed text-ink-muted">
-            Whether it&apos;s a midnight emergency or a planned water heater upgrade, you get
-            direct access to an owner who cares about your home, your timeline, and your
-            peace of mind.
+            Whether it is an active leak, a drain issue, a water heater problem, or a
+            planned repair, the goal is to make the process feel calm, direct, and
+            professionally handled from start to finish.
           </p>
           <ul className="mt-8 space-y-3">
             {[
-              "Personally overseen by the owner on every job",
-              "Responsive scheduling and real-time updates",
-              "Clean, respectful crews who protect your space",
+              "Local service focused on Greensboro and nearby communities",
+              "Fast scheduling, clear updates, and practical next steps",
+              "Clean work habits, protected spaces, and respectful communication",
             ].map((item) => (
               <li key={item} className="flex gap-3 text-ink-muted">
                 <span className="mt-1 text-gold">◆</span>

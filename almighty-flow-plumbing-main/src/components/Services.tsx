@@ -12,8 +12,8 @@ export function Services() {
         <FadeIn>
           <SectionHeading
             eyebrow="Core Services"
-            title="High-performance plumbing for high-expectation homes"
-            description="Clean execution, modern diagnostics, and emergency-ready service across the jobs that matter most."
+            title="Plumbing services built around response, clarity, and clean work"
+            description="From urgent leaks to planned repairs, Almighty Flow keeps the service path simple: tell us the issue, get clear next steps, and know what happens next."
           />
         </FadeIn>
 
@@ -38,7 +38,7 @@ export function Services() {
                 <div className="mt-6 h-1.5 w-32 wave-ribbon" />
                 <a
                   href="#contact"
-                  className="mt-5 inline-flex text-sm font-black uppercase tracking-[0.18em] text-accent-bright transition-colors hover:text-gold-soft"
+                  className="mt-5 inline-flex text-sm font-black uppercase tracking-[0.18em] text-accent transition-colors hover:text-gold"
                 >
                   Request Service
                 </a>
