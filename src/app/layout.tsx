@@ -1,26 +1,19 @@
 import type { Metadata } from "next";
-import { Cinzel, Great_Vibes, Plus_Jakarta_Sans } from "next/font/google";
+import { Inter, Poppins } from "next/font/google";
 import Script from "next/script";
 import "./globals.css";
 import { site } from "@/lib/site";
 
-const sans = Plus_Jakarta_Sans({
+const sans = Inter({
   variable: "--font-sans",
   subsets: ["latin"],
   display: "swap",
 });
 
-const heading = Cinzel({
+const heading = Poppins({
   variable: "--font-heading",
   subsets: ["latin"],
   weight: ["600", "700", "800", "900"],
-  display: "swap",
-});
-
-const script = Great_Vibes({
-  variable: "--font-script",
-  subsets: ["latin"],
-  weight: "400",
   display: "swap",
 });
 
@@ -88,7 +81,7 @@ export default function RootLayout({
   children,
 }: Readonly<{ children: React.ReactNode }>) {
   return (
-    <html lang="en" className={`${sans.variable} ${heading.variable} ${script.variable}`}>
+    <html lang="en" className={`${sans.variable} ${heading.variable}`}>
       <head>
         <script
           type="application/ld+json"

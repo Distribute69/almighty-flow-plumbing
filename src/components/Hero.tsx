@@ -36,12 +36,11 @@ const quickActions = [
 
 export function Hero() {
   return (
-    <section className="relative min-h-[100svh] overflow-hidden border-b border-slate-300/70 pt-24 sm:pt-28">
-      <div className="pointer-events-none absolute inset-0 bg-grid opacity-70" aria-hidden />
-      <div className="pointer-events-none absolute inset-x-0 top-0 h-40 bg-gradient-to-b from-white via-white/80 to-transparent" />
-      <div className="pointer-events-none absolute inset-x-0 bottom-0 hero-water h-80 opacity-100" aria-hidden />
-      <div className="pointer-events-none absolute inset-0 metal-texture opacity-45" aria-hidden />
-      <div className="pointer-events-none absolute left-1/2 top-24 h-[42rem] w-[42rem] -translate-x-1/2 rounded-full border border-gold/20 gold-arc opacity-70" />
+    <section className="relative min-h-[100svh] overflow-hidden border-b border-slate-300/70 bg-[#fbfcfd] pt-24 sm:pt-28">
+      <div className="pointer-events-none absolute inset-0 bg-grid opacity-100" aria-hidden />
+      <div className="pointer-events-none absolute inset-x-0 top-0 h-44 bg-gradient-to-b from-white via-white/92 to-transparent" />
+      <div className="pointer-events-none absolute inset-x-0 bottom-0 hero-water h-72 opacity-70" aria-hidden />
+      <div className="pointer-events-none absolute inset-0 metal-texture opacity-25" aria-hidden />
 
       <div className="relative mx-auto grid max-w-7xl gap-10 px-5 pb-10 sm:px-8 lg:grid-cols-[1.05fr_0.95fr] lg:items-center lg:gap-14">
         <motion.div
@@ -55,7 +54,7 @@ export function Hero() {
             Premium plumbing service - Greensboro, NC
           </p>
 
-          <h1 className="font-heading text-5xl font-black uppercase leading-[0.94] tracking-wide sm:text-6xl lg:text-7xl xl:text-[5.35rem]">
+          <h1 className="font-heading text-5xl font-black uppercase leading-[0.96] tracking-[0.02em] sm:text-6xl lg:text-7xl xl:text-[5.35rem]">
             <span className="chrome-text block">Fast Plumbing</span>
             <span className="chrome-text block">Done Clean.</span>
             <span className="water-text block drop-shadow-[0_10px_24px_rgba(16,156,241,0.24)]">

@@ -42,7 +42,7 @@
   --color-footer-fg: var(--footer-fg);
   --font-sans: var(--font-sans);
   --font-heading: var(--font-heading);
-  --font-script: var(--font-script);
+  --font-script: var(--font-sans);
   --shadow-glow: 0 12px 30px rgba(16, 156, 241, 0.22);
   --shadow-glow-lg: 0 18px 44px rgba(16, 156, 241, 0.3);
   --shadow-card: 0 24px 70px rgba(16, 32, 51, 0.12);
@@ -54,9 +54,7 @@ html {
 
 body {
   background:
-    radial-gradient(circle at 50% -14%, rgba(16, 156, 241, 0.16), transparent 34rem),
-    radial-gradient(circle at 12% 18%, rgba(217, 185, 112, 0.14), transparent 24rem),
-    linear-gradient(180deg, #fbfcfe 0%, #eef3f7 46%, #f8fafc 100%);
+    linear-gradient(180deg, #ffffff 0%, #f8fafc 46%, #eef3f7 100%);
   color: var(--ink-fg);
   font-family: var(--font-sans), system-ui, sans-serif;
 }
@@ -68,9 +66,10 @@ body {
 
 .bg-grid {
   background-image:
-    linear-gradient(rgba(16, 32, 51, 0.045) 1px, transparent 1px),
-    linear-gradient(90deg, rgba(16, 32, 51, 0.045) 1px, transparent 1px);
-  background-size: 56px 56px;
+    linear-gradient(135deg, rgba(255, 255, 255, 0.96), rgba(244, 248, 251, 0.94)),
+    radial-gradient(circle at 78% 18%, rgba(16, 156, 241, 0.1), transparent 24rem),
+    radial-gradient(circle at 18% 76%, rgba(217, 185, 112, 0.08), transparent 24rem);
+  background-size: auto;
 }
 
 .metal-panel {
@@ -104,8 +103,8 @@ body {
 
 .metal-texture {
   background-image:
-    linear-gradient(115deg, rgba(255, 255, 255, 0.5), transparent 24%, rgba(16, 32, 51, 0.045) 48%, transparent 72%),
-    repeating-linear-gradient(90deg, rgba(16, 32, 51, 0.035) 0 1px, transparent 1px 8px);
+    linear-gradient(115deg, rgba(255, 255, 255, 0.48), transparent 28%, rgba(16, 32, 51, 0.025) 52%, transparent 76%),
+    repeating-linear-gradient(90deg, rgba(16, 32, 51, 0.018) 0 1px, transparent 1px 12px);
 }
 
 .hero-water {
@@ -117,8 +116,8 @@ body {
 
 .emblem-shell {
   background:
-    radial-gradient(circle at 50% 28%, rgba(16, 156, 241, 0.16), transparent 38%),
-    linear-gradient(145deg, rgba(255, 255, 255, 0.95), rgba(236, 242, 247, 0.86) 40%, rgba(255, 255, 255, 0.98));
+    radial-gradient(circle at 50% 28%, rgba(16, 156, 241, 0.1), transparent 38%),
+    linear-gradient(145deg, rgba(255, 255, 255, 0.98), rgba(244, 248, 251, 0.9) 48%, rgba(255, 255, 255, 0.98));
   border: 1px solid rgba(182, 140, 66, 0.28);
   box-shadow:
     0 0 0 1px rgba(255, 255, 255, 0.86) inset,
