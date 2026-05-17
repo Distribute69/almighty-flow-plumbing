@@ -4,13 +4,14 @@ import { whyUs } from "@/lib/site";
 
 export function WhyChooseUs() {
   return (
-    <section id="why-us" className="relative py-24 sm:py-32">
+    <section id="why-us" className="relative overflow-hidden bg-gradient-to-b from-white via-chrome to-white py-24 sm:py-32">
+      <div className="pointer-events-none absolute inset-0 bg-gradient-to-b from-transparent via-accent/5 to-transparent" />
       <div className="mx-auto max-w-7xl px-5 sm:px-8">
         <FadeIn>
           <SectionHeading
             eyebrow="Why Choose Us"
-            title="The Almighty Flow standard"
-            description="Premium isn't a price point — it's how we show up, communicate, and stand behind every repair."
+            title="A higher standard for the work inside your home"
+            description="Premium is not noise. It is speed, clarity, clean work, and the confidence that every detail is handled."
             align="center"
             className="mx-auto"
           />
@@ -19,10 +20,11 @@ export function WhyChooseUs() {
         <div className="mt-14 grid gap-5 sm:grid-cols-2 lg:grid-cols-3">
           {whyUs.map((item, i) => (
             <FadeIn key={item.title} delay={i * 0.05}>
-              <div className="group relative overflow-hidden rounded-2xl border border-ink-700 bg-ink-800 p-7 shadow-sm transition-all duration-300 hover:border-accent/40 hover:shadow-md">
-                <div className="absolute -right-4 -top-4 h-24 w-24 rounded-full bg-accent/5 blur-2xl transition-all group-hover:bg-accent/15" />
-                <span className="text-3xl font-bold text-accent/40">0{i + 1}</span>
-                <h3 className="mt-3 text-lg font-bold text-ink-fg">{item.title}</h3>
+              <div className="metal-panel section-badge group relative overflow-hidden p-7 transition-all duration-300 hover:border-accent/35 hover:shadow-glow">
+                <div className="absolute inset-x-0 top-0 h-px bg-gradient-to-r from-transparent via-gold/70 to-transparent" />
+                <div className="absolute -bottom-8 right-8 h-16 w-40 wave-ribbon opacity-35" />
+                <span className="font-heading text-3xl font-black text-accent/70">0{i + 1}</span>
+                <h3 className="mt-3 text-lg font-extrabold text-ink-fg">{item.title}</h3>
                 <p className="mt-2 text-sm leading-relaxed text-ink-muted">{item.description}</p>
               </div>
             </FadeIn>

@@ -15,9 +15,9 @@ const trust = [
 
 export function Hero() {
   return (
-    <section className="relative min-h-[100svh] overflow-hidden border-b border-white/10 pt-24 sm:pt-28">
-      <div className="pointer-events-none absolute inset-0 bg-grid opacity-50" aria-hidden />
-      <div className="pointer-events-none absolute inset-x-0 top-0 h-40 bg-gradient-to-b from-accent/20 to-transparent" />
+    <section className="relative min-h-[100svh] overflow-hidden border-b border-slate-300/70 pt-24 sm:pt-28">
+      <div className="pointer-events-none absolute inset-0 bg-grid opacity-70" aria-hidden />
+      <div className="pointer-events-none absolute inset-x-0 top-0 h-40 bg-gradient-to-b from-white via-white/80 to-transparent" />
       <div className="pointer-events-none absolute inset-x-0 bottom-0 hero-water h-80 opacity-100" aria-hidden />
       <div className="pointer-events-none absolute inset-0 metal-texture opacity-45" aria-hidden />
       <div className="pointer-events-none absolute left-1/2 top-24 h-[42rem] w-[42rem] -translate-x-1/2 rounded-full border border-gold/20 gold-arc opacity-70" />
@@ -29,7 +29,7 @@ export function Hero() {
           transition={{ duration: 0.7, ease: [0.22, 1, 0.36, 1] }}
           className="order-2 pt-0 lg:order-1"
         >
-          <p className="mb-5 inline-flex items-center gap-2 rounded-full border border-gold/40 bg-gold/[0.1] px-4 py-2 text-xs font-black uppercase tracking-[0.24em] text-gold-soft shadow-[0_0_28px_rgba(201,164,106,0.12)]">
+          <p className="mb-5 inline-flex items-center gap-2 rounded-full border border-gold/30 bg-white/82 px-4 py-2 text-xs font-black uppercase tracking-[0.24em] text-gold shadow-[0_12px_26px_rgba(16,32,51,0.08)]">
             <span className="h-1.5 w-1.5 animate-pulse rounded-full bg-accent" />
             Premium emergency plumbing · Greensboro, NC
           </p>
@@ -37,7 +37,7 @@ export function Hero() {
           <h1 className="font-heading text-5xl font-black uppercase leading-[0.94] tracking-wide sm:text-6xl lg:text-7xl xl:text-[5.35rem]">
             <span className="chrome-text block">When Water</span>
             <span className="chrome-text block">Won&apos;t Wait,</span>
-            <span className="water-text block drop-shadow-[0_0_26px_rgba(19,159,243,0.55)]">
+            <span className="water-text block drop-shadow-[0_10px_24px_rgba(16,156,241,0.24)]">
               Flow Answers.
             </span>
           </h1>
@@ -55,7 +55,7 @@ export function Hero() {
                 key={item}
                 className="flex items-center gap-2.5 text-sm font-semibold text-ink-muted"
               >
-                <span className="flex h-5 w-5 shrink-0 items-center justify-center rounded-full border border-accent/35 bg-accent/15 text-accent-bright shadow-glow">
+                <span className="flex h-5 w-5 shrink-0 items-center justify-center rounded-full border border-accent/25 bg-white text-accent shadow-glow">
                   ✓
                 </span>
                 {item}
@@ -100,7 +100,7 @@ export function Hero() {
               {["24/7", "Clean", "Fast"].map((item) => (
                 <div
                   key={item}
-                  className="rounded-xl border border-white/12 bg-ink-950/55 px-3 py-3 font-heading text-sm font-black uppercase tracking-[0.18em] text-chrome shadow-glow"
+                  className="rounded-xl border border-slate-300/80 bg-white/86 px-3 py-3 font-heading text-sm font-black uppercase tracking-[0.18em] text-ink-900 shadow-glow"
                 >
                   {item}
                 </div>
@@ -116,8 +116,8 @@ export function Hero() {
                   "url('https://images.unsplash.com/photo-1581093458791-9d2ed2b1f4a9?w=1200&q=80&auto=format&fit=crop')",
               }}
             />
-            <div className="absolute inset-0 bg-gradient-to-t from-ink-950 via-ink-950/30 to-transparent" />
-            <div className="absolute inset-x-0 top-0 h-24 bg-gradient-to-b from-accent/30 to-transparent" />
+            <div className="absolute inset-0 bg-gradient-to-t from-ink-950/72 via-ink-950/16 to-transparent" />
+            <div className="absolute inset-x-0 top-0 h-24 bg-gradient-to-b from-white/45 to-transparent" />
             <div className="relative aspect-[16/9] p-6 sm:p-8" />
             <div className="absolute inset-0 flex flex-col justify-end p-6 sm:p-8">
               <p className="text-xs font-bold uppercase tracking-[0.26em] text-gold-soft">

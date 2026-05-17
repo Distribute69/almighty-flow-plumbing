@@ -17,7 +17,7 @@ function SocialIcon({
       target="_blank"
       rel="noopener noreferrer"
       aria-label={label}
-      className="flex h-10 w-10 items-center justify-center rounded-full border border-white/12 bg-white/5 text-ink-muted transition-colors hover:border-accent hover:text-accent-bright"
+    className="flex h-10 w-10 items-center justify-center rounded-full border border-white/14 bg-white/8 text-footer-fg transition-colors hover:border-accent hover:text-accent-bright"
     >
       {children}
     </a>
@@ -40,7 +40,7 @@ export function Footer() {
               height={56}
               className="h-20 w-auto rounded-lg object-contain"
             />
-            <p className="mt-4 text-sm leading-relaxed text-ink-muted">
+            <p className="mt-4 text-sm leading-relaxed text-footer-fg">
               Premium plumbing for {site.city}, {site.state}. Owner-operated by{" "}
               {site.owner}.
             </p>
@@ -73,7 +73,7 @@ export function Footer() {
                 <li key={link.href}>
                   <Link
                     href={link.href}
-                    className="text-sm text-ink-muted transition-colors hover:text-accent"
+                    className="text-sm text-footer-fg transition-colors hover:text-accent-bright"
                   >
                     {link.label}
                   </Link>
@@ -82,7 +82,7 @@ export function Footer() {
               <li>
                 <Link
                   href="/privacy"
-                  className="text-sm text-ink-muted transition-colors hover:text-accent"
+                  className="text-sm text-footer-fg transition-colors hover:text-accent-bright"
                 >
                   Privacy Policy
                 </Link>
@@ -90,7 +90,7 @@ export function Footer() {
               <li>
                 <Link
                   href="/terms"
-                  className="text-sm text-ink-muted transition-colors hover:text-accent"
+                  className="text-sm text-footer-fg transition-colors hover:text-accent-bright"
                 >
                   Terms
                 </Link>
@@ -100,14 +100,14 @@ export function Footer() {
 
           <div>
             <h3 className="text-sm font-bold uppercase tracking-wider text-gold-soft">Contact</h3>
-            <ul className="mt-4 space-y-2 text-sm text-ink-muted">
+            <ul className="mt-4 space-y-2 text-sm text-footer-fg">
               <li>
-                <a href={`tel:${site.phoneHref}`} className="hover:text-accent">
+                <a href={`tel:${site.phoneHref}`} className="hover:text-accent-bright">
                   {site.phone}
                 </a>
               </li>
               <li>
-                <a href={`mailto:${site.email}`} className="hover:text-accent">
+                <a href={`mailto:${site.email}`} className="hover:text-accent-bright">
                   {site.email}
                 </a>
               </li>
@@ -122,7 +122,7 @@ export function Footer() {
             <h3 className="text-sm font-bold uppercase tracking-wider text-gold-soft">
               Emergency?
             </h3>
-            <p className="mt-4 text-sm text-ink-muted">
+            <p className="mt-4 text-sm text-footer-fg">
               Available 24/7 for urgent plumbing issues across Greensboro and surrounding
               areas.
             </p>
@@ -135,7 +135,7 @@ export function Footer() {
           </div>
         </div>
 
-        <div className="mt-12 border-t border-ink-700 pt-8 text-center text-sm text-ink-muted">
+        <div className="mt-12 border-t border-white/12 pt-8 text-center text-sm text-footer-fg">
           <p>
             &copy; {year} {site.name} · {site.city}, {site.state}
           </p>

@@ -1,24 +1,24 @@
 @import "tailwindcss";
 
 :root {
-  --ink-950: #050913;
-  --ink-900: #091321;
-  --ink-800: #101d2d;
-  --ink-700: #223348;
-  --ink-600: #496176;
-  --ink-fg: #f4f7fb;
-  --ink-muted: #a9b8c8;
-  --accent: #139ff3;
-  --accent-bright: #62d5ff;
-  --accent-dim: #09689f;
-  --chrome: #d8e2eb;
-  --chrome-dark: #687584;
-  --gold: #c9a46a;
-  --gold-soft: #f0d49a;
-  --slate-400: #8ea0b2;
-  --slate-300: #c4d0dc;
-  --footer-bg: #050913;
-  --footer-fg: #c4d0dc;
+  --ink-950: #07111f;
+  --ink-900: #102033;
+  --ink-800: #1a3148;
+  --ink-700: #324b63;
+  --ink-600: #60758a;
+  --ink-fg: #102033;
+  --ink-muted: #5f7184;
+  --accent: #109cf1;
+  --accent-bright: #4cc9ff;
+  --accent-dim: #0874bd;
+  --chrome: #eef3f7;
+  --chrome-dark: #a8b5c1;
+  --gold: #b68c42;
+  --gold-soft: #d9b970;
+  --slate-400: #78899a;
+  --slate-300: #d5dde5;
+  --footer-bg: #07111f;
+  --footer-fg: #d6e0ea;
 }
 
 @theme inline {
@@ -43,9 +43,9 @@
   --font-sans: var(--font-sans);
   --font-heading: var(--font-heading);
   --font-script: var(--font-script);
-  --shadow-glow: 0 0 28px rgba(19, 159, 243, 0.28);
-  --shadow-glow-lg: 0 0 48px rgba(19, 159, 243, 0.36);
-  --shadow-card: 0 24px 70px rgba(0, 0, 0, 0.32);
+  --shadow-glow: 0 12px 30px rgba(16, 156, 241, 0.22);
+  --shadow-glow-lg: 0 18px 44px rgba(16, 156, 241, 0.3);
+  --shadow-card: 0 24px 70px rgba(16, 32, 51, 0.12);
 }
 
 html {
@@ -54,43 +54,43 @@ html {
 
 body {
   background:
-    radial-gradient(circle at 50% -16%, rgba(19, 159, 243, 0.28), transparent 38rem),
-    radial-gradient(circle at 14% 18%, rgba(240, 212, 154, 0.12), transparent 24rem),
-    linear-gradient(180deg, #071120 0%, var(--ink-950) 42%, #03060d 100%);
+    radial-gradient(circle at 50% -14%, rgba(16, 156, 241, 0.16), transparent 34rem),
+    radial-gradient(circle at 12% 18%, rgba(217, 185, 112, 0.14), transparent 24rem),
+    linear-gradient(180deg, #fbfcfe 0%, #eef3f7 46%, #f8fafc 100%);
   color: var(--ink-fg);
   font-family: var(--font-sans), system-ui, sans-serif;
 }
 
 ::selection {
-  background: rgba(74, 159, 212, 0.25);
-  color: var(--ink-fg);
+  background: rgba(16, 156, 241, 0.18);
+  color: var(--ink-950);
 }
 
 .bg-grid {
   background-image:
-    linear-gradient(rgba(216, 226, 235, 0.045) 1px, transparent 1px),
-    linear-gradient(90deg, rgba(216, 226, 235, 0.045) 1px, transparent 1px);
+    linear-gradient(rgba(16, 32, 51, 0.045) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(16, 32, 51, 0.045) 1px, transparent 1px);
   background-size: 56px 56px;
 }
 
 .metal-panel {
   background:
-    linear-gradient(135deg, rgba(255, 255, 255, 0.16), rgba(255, 255, 255, 0.025) 34%, rgba(19, 159, 243, 0.1)),
-    linear-gradient(160deg, #121f30 0%, #07111f 52%, #0d1827 100%);
-  border: 1px solid rgba(216, 226, 235, 0.16);
+    linear-gradient(135deg, rgba(255, 255, 255, 0.96), rgba(247, 250, 252, 0.78) 42%, rgba(228, 236, 244, 0.9)),
+    linear-gradient(160deg, #ffffff 0%, #edf2f6 52%, #f9fbfd 100%);
+  border: 1px solid rgba(123, 143, 162, 0.2);
   box-shadow: var(--shadow-card);
 }
 
 .chrome-text {
-  background: linear-gradient(180deg, #ffffff 0%, #d9e2ea 34%, #727d8c 54%, #ffffff 78%, #9da9b5 100%);
+  background: linear-gradient(180deg, #07111f 0%, #20344b 34%, #7d8c9b 54%, #182b42 78%, #07111f 100%);
   -webkit-background-clip: text;
   background-clip: text;
   color: transparent;
-  filter: drop-shadow(0 10px 18px rgba(0, 0, 0, 0.45));
+  filter: drop-shadow(0 10px 18px rgba(16, 32, 51, 0.12));
 }
 
 .water-text {
-  background: linear-gradient(135deg, #e7fbff 0%, #62d5ff 28%, #139ff3 62%, #074a9f 100%);
+  background: linear-gradient(135deg, #dff8ff 0%, #4cc9ff 28%, #109cf1 62%, #075da2 100%);
   -webkit-background-clip: text;
   background-clip: text;
   color: transparent;
@@ -98,32 +98,32 @@ body {
 
 .waterline {
   height: 1px;
-  background: linear-gradient(90deg, transparent, rgba(19, 159, 243, 0.75), rgba(240, 212, 154, 0.65), transparent);
-  box-shadow: 0 0 22px rgba(19, 159, 243, 0.45);
+  background: linear-gradient(90deg, transparent, rgba(16, 156, 241, 0.45), rgba(217, 185, 112, 0.45), transparent);
+  box-shadow: 0 8px 22px rgba(16, 156, 241, 0.12);
 }
 
 .metal-texture {
   background-image:
-    linear-gradient(115deg, rgba(255, 255, 255, 0.08), transparent 24%, rgba(255, 255, 255, 0.06) 48%, transparent 72%),
-    repeating-linear-gradient(90deg, rgba(255, 255, 255, 0.035) 0 1px, transparent 1px 7px);
+    linear-gradient(115deg, rgba(255, 255, 255, 0.5), transparent 24%, rgba(16, 32, 51, 0.045) 48%, transparent 72%),
+    repeating-linear-gradient(90deg, rgba(16, 32, 51, 0.035) 0 1px, transparent 1px 8px);
 }
 
 .hero-water {
   background:
-    linear-gradient(120deg, transparent 0 16%, rgba(98, 213, 255, 0.22) 28%, transparent 44%),
-    linear-gradient(300deg, transparent 0 42%, rgba(19, 159, 243, 0.2) 55%, transparent 70%);
+    linear-gradient(120deg, transparent 0 16%, rgba(76, 201, 255, 0.18) 28%, transparent 44%),
+    linear-gradient(300deg, transparent 0 42%, rgba(16, 156, 241, 0.14) 55%, transparent 70%);
   mask-image: linear-gradient(90deg, transparent, #000 20%, #000 80%, transparent);
 }
 
 .emblem-shell {
   background:
-    radial-gradient(circle at 50% 24%, rgba(98, 213, 255, 0.26), transparent 34%),
-    linear-gradient(145deg, rgba(240, 212, 154, 0.28), rgba(255, 255, 255, 0.07) 17%, rgba(9, 19, 33, 0.9) 52%, rgba(19, 159, 243, 0.18));
-  border: 1px solid rgba(240, 212, 154, 0.38);
+    radial-gradient(circle at 50% 28%, rgba(16, 156, 241, 0.16), transparent 38%),
+    linear-gradient(145deg, rgba(255, 255, 255, 0.95), rgba(236, 242, 247, 0.86) 40%, rgba(255, 255, 255, 0.98));
+  border: 1px solid rgba(182, 140, 66, 0.28);
   box-shadow:
-    0 0 0 1px rgba(255, 255, 255, 0.08) inset,
-    0 0 42px rgba(19, 159, 243, 0.28),
-    0 34px 90px rgba(0, 0, 0, 0.52);
+    0 0 0 1px rgba(255, 255, 255, 0.86) inset,
+    0 18px 54px rgba(16, 156, 241, 0.14),
+    0 34px 90px rgba(16, 32, 51, 0.16);
 }
 
 .badge-cut {
@@ -133,21 +133,21 @@ body {
 .gold-arc {
   border-top: 2px solid rgba(240, 212, 154, 0.72);
   border-radius: 999px 999px 0 0;
-  box-shadow: 0 -8px 26px rgba(240, 212, 154, 0.1), 0 0 22px rgba(19, 159, 243, 0.15);
+  box-shadow: 0 -8px 26px rgba(217, 185, 112, 0.12), 0 0 22px rgba(16, 156, 241, 0.12);
 }
 
 .wave-ribbon {
   background:
-    radial-gradient(120% 160% at 0% 50%, rgba(98, 213, 255, 0.95), rgba(19, 159, 243, 0.62) 38%, transparent 39%),
-    linear-gradient(90deg, transparent, rgba(98, 213, 255, 0.96), rgba(19, 159, 243, 0.78), transparent);
-  filter: drop-shadow(0 0 18px rgba(19, 159, 243, 0.55));
+    radial-gradient(120% 160% at 0% 50%, rgba(76, 201, 255, 0.88), rgba(16, 156, 241, 0.55) 38%, transparent 39%),
+    linear-gradient(90deg, transparent, rgba(76, 201, 255, 0.92), rgba(16, 156, 241, 0.72), transparent);
+  filter: drop-shadow(0 10px 16px rgba(16, 156, 241, 0.22));
 }
 
 .bevel-button {
   box-shadow:
     0 1px 0 rgba(255, 255, 255, 0.45) inset,
-    0 -10px 26px rgba(2, 55, 92, 0.28) inset,
-    0 0 34px rgba(19, 159, 243, 0.32);
+    0 -10px 26px rgba(2, 55, 92, 0.22) inset,
+    0 14px 34px rgba(16, 156, 241, 0.22);
 }
 
 .section-badge {
@@ -158,7 +158,7 @@ body {
   position: absolute;
   width: 30px;
   height: 30px;
-  border-color: rgba(201, 164, 106, 0.72);
+  border-color: rgba(182, 140, 66, 0.56);
   border-style: solid;
   pointer-events: none;
 }
@@ -177,15 +177,15 @@ body {
 
 .glass-card {
   background:
-    linear-gradient(145deg, rgba(255, 255, 255, 0.085), rgba(255, 255, 255, 0.02)),
-    rgba(9, 19, 33, 0.78);
-  border: 1px solid rgba(216, 226, 235, 0.14);
+    linear-gradient(145deg, rgba(255, 255, 255, 0.96), rgba(242, 246, 250, 0.82)),
+    rgba(255, 255, 255, 0.86);
+  border: 1px solid rgba(123, 143, 162, 0.18);
   box-shadow: var(--shadow-card);
-  backdrop-filter: blur(18px);
+  backdrop-filter: blur(16px);
 }
 
 .glass-card:hover {
-  border-color: rgba(98, 213, 255, 0.42);
+  border-color: rgba(16, 156, 241, 0.34);
   box-shadow: var(--shadow-glow);
 }
 

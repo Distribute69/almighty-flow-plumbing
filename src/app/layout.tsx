@@ -95,7 +95,7 @@ export default function RootLayout({
           dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
         />
       </head>
-      <body className="min-h-screen bg-ink-950 font-sans antialiased">
+      <body className="min-h-screen bg-chrome font-sans antialiased">
         {children}
         <Script
           src="https://widgets.leadconnectorhq.com/loader.js"

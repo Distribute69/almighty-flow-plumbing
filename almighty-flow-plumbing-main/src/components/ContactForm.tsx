@@ -1,36 +1,26 @@
-"use client";
-
-import { useState, type FormEvent } from "react";
 import { FadeIn } from "@/components/ui/FadeIn";
-import { Button } from "@/components/ui/Button";
 import { PhoneIcon } from "@/components/icons/ServiceIcons";
-import { serviceOptions, site } from "@/lib/site";
+import { site } from "@/lib/site";
 
 export function ContactForm() {
-  const [submitted, setSubmitted] = useState(false);
-
-  const handleSubmit = (e: FormEvent<HTMLFormElement>) => {
-    e.preventDefault();
-    setSubmitted(true);
-  };
-
   return (
-    <section id="contact" className="relative py-24 sm:py-32">
+    <section id="contact" className="relative overflow-hidden bg-gradient-to-b from-slate-300/35 via-white to-chrome py-24 sm:py-32">
       <div className="pointer-events-none absolute inset-0 bg-gradient-to-b from-transparent via-accent/5 to-transparent" />
+      <div className="pointer-events-none absolute inset-0 metal-texture opacity-30" />
       <div className="relative mx-auto max-w-7xl px-5 sm:px-8">
         <div className="grid gap-12 lg:grid-cols-2 lg:gap-20">
           <FadeIn>
-            <p className="text-xs font-bold uppercase tracking-[0.2em] text-accent">Contact</p>
-            <h2 className="mt-3 text-3xl font-bold tracking-tight text-ink-fg sm:text-4xl">
-              Request service today
+            <p className="text-xs font-bold uppercase tracking-[0.26em] text-gold">Contact</p>
+            <h2 className="mt-3 font-heading text-3xl font-black uppercase tracking-wide text-ink-fg sm:text-4xl">
+              Schedule premium plumbing service
             </h2>
             <p className="mt-4 text-lg text-ink-muted">
-              Tell us what you need — we respond quickly with clear next steps and honest
-              pricing. For emergencies, call directly.
+              For active leaks, sewer backups, or no-water emergencies, call now. For
+              scheduling, use the on-site chat and we&apos;ll collect the details cleanly.
             </p>
             <a
               href={`tel:${site.phoneHref}`}
-              className="mt-8 inline-flex items-center gap-3 rounded-2xl border border-accent/30 bg-accent/10 px-6 py-4 text-lg font-bold text-accent transition-colors hover:bg-accent/20"
+              className="mt-8 inline-flex items-center gap-3 rounded-2xl border border-accent/24 bg-white px-6 py-4 text-lg font-bold text-accent shadow-sm transition-colors hover:bg-accent/10"
             >
               <PhoneIcon className="h-6 w-6" />
               {site.phone}
@@ -44,87 +34,36 @@ export function ContactForm() {
           </FadeIn>
 
           <FadeIn delay={0.1}>
-            {submitted ? (
-              <div
-                className="glass-card rounded-2xl p-10 text-center"
-                role="status"
-              >
-                <p className="text-2xl font-bold text-ink-fg">Message received</p>
+            <div className="glass-card section-badge space-y-6 p-8 sm:p-10">
+              <div>
+                <p className="font-heading text-2xl font-black uppercase tracking-wide text-ink-fg">
+                  Dispatch-ready intake
+                </p>
                 <p className="mt-3 text-ink-muted">
-                  Thanks for reaching out. {site.owner.split(" ")[0]} or a team member will
-                  contact you shortly.
+                  The request process captures the issue, urgency, address, and best
+                  appointment window so the next step is clear.
                 </p>
               </div>
-            ) : (
-              <form
-                onSubmit={handleSubmit}
-                className="glass-card space-y-5 rounded-2xl p-8 sm:p-10"
-              >
-                <label className="block">
-                  <span className="mb-2 block text-sm font-semibold text-ink-fg">
-                    Name *
-                  </span>
-                  <input
-                    name="name"
-                    required
-                    autoComplete="name"
-                    className="w-full rounded-xl border border-ink-700 bg-ink-800 px-4 py-3 text-ink-fg outline-none transition focus:border-accent focus:ring-2 focus:ring-accent/20"
-                  />
-                </label>
-                <label className="block">
-                  <span className="mb-2 block text-sm font-semibold text-ink-fg">
-                    Email *
-                  </span>
-                  <input
-                    name="email"
-                    type="email"
-                    required
-                    autoComplete="email"
-                    className="w-full rounded-xl border border-ink-700 bg-ink-800 px-4 py-3 text-ink-fg outline-none transition focus:border-accent focus:ring-2 focus:ring-accent/20"
-                  />
-                </label>
-                <label className="block">
-                  <span className="mb-2 block text-sm font-semibold text-ink-fg">
-                    Service Needed *
-                  </span>
-                  <select
-                    name="service"
-                    required
-                    className="w-full rounded-xl border border-ink-700 bg-ink-800 px-4 py-3 text-ink-fg outline-none transition focus:border-accent focus:ring-2 focus:ring-accent/20"
-                    defaultValue=""
-                  >
-                    <option value="" disabled>
-                      Select a service
-                    </option>
-                    {serviceOptions.map((opt) => (
-                      <option key={opt} value={opt}>
-                        {opt}
-                      </option>
-                    ))}
-                  </select>
-                </label>
-                <label className="block">
-                  <span className="mb-2 block text-sm font-semibold text-ink-fg">
-                    Message
-                  </span>
-                  <textarea
-                    name="message"
-                    rows={4}
-                    placeholder="Describe the issue or project..."
-                    className="w-full resize-none rounded-xl border border-ink-700 bg-ink-800 px-4 py-3 text-ink-fg outline-none transition focus:border-accent focus:ring-2 focus:ring-accent/20"
-                  />
-                </label>
-                <Button type="submit" className="w-full py-4 text-base">
-                  Submit Request
-                </Button>
-                <p className="text-xs leading-relaxed text-ink-muted">
-                  For text message updates, use the chat widget or call {site.phone}. By
-                  contacting Almighty Flow Plumbing through the chat widget, phone, or text,
-                  you agree to receive service-related messages about your inquiry. Message
-                  and data rates may apply. Message frequency varies. Reply STOP to opt out.
+
+              <div className="grid gap-3">
+                <a
+                  href={`tel:${site.phoneHref}`}
+                  className="bevel-button inline-flex items-center justify-center gap-2 rounded-full bg-gradient-to-r from-accent-dim via-accent to-accent-bright px-6 py-4 text-sm font-black uppercase tracking-[0.16em] text-white shadow-glow transition-all duration-300 hover:shadow-glow-lg"
+                >
+                  <PhoneIcon className="h-5 w-5" />
+                  Call {site.phone}
+                </a>
+                <p className="text-center text-sm font-semibold text-ink-muted">
+                  Same-day and emergency requests are prioritized.
                 </p>
-              </form>
-            )}
+              </div>
+
+              <p className="text-xs leading-relaxed text-ink-muted">
+                By contacting Almighty Flow Plumbing through chat, phone, or text, you agree
+                to receive service-related messages about your inquiry. Message and data rates
+                may apply. Message frequency varies. Reply STOP to opt out.
+              </p>
+            </div>
           </FadeIn>
         </div>
       </div>

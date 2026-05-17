@@ -8,9 +8,9 @@ export const metadata = {
 
 export default function TermsPage() {
   return (
-    <main className="min-h-screen bg-ink-950 px-5 py-20 text-ink-fg sm:px-8">
-      <div className="mx-auto max-w-3xl">
-        <Link href="/" className="text-sm font-semibold text-accent hover:text-accent-bright">
+    <main className="min-h-screen bg-gradient-to-b from-white via-chrome to-white px-5 py-20 text-ink-fg sm:px-8">
+      <div className="glass-card mx-auto max-w-3xl rounded-3xl p-8 sm:p-10">
+        <Link href="/" className="text-sm font-semibold text-accent hover:text-accent-dim">
           Back to home
         </Link>
         <h1 className="mt-8 text-4xl font-bold tracking-tight">Terms</h1>

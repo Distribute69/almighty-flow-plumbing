@@ -5,7 +5,7 @@ import { site } from "@/lib/site";
 
 export function About() {
   return (
-    <section id="about" className="relative overflow-hidden border-y border-white/10 bg-ink-900 py-24 sm:py-32">
+    <section id="about" className="relative overflow-hidden border-y border-slate-300/70 bg-gradient-to-b from-slate-300/45 via-white to-chrome py-24 sm:py-32">
       <div className="pointer-events-none absolute inset-0 metal-texture opacity-25" />
       <div className="mx-auto grid max-w-7xl items-center gap-12 px-5 sm:px-8 lg:grid-cols-2 lg:gap-20">
         <FadeIn>
@@ -17,7 +17,7 @@ export function About() {
               className="object-cover"
               sizes="(max-width: 1024px) 100vw, 50vw"
             />
-            <div className="absolute inset-0 bg-gradient-to-t from-ink-950 via-ink-950/20 to-transparent" />
+            <div className="absolute inset-0 bg-gradient-to-t from-ink-950/68 via-ink-950/14 to-transparent" />
             <div className="absolute bottom-0 left-0 right-0 p-6 sm:p-8">
               <p className="text-xs font-bold uppercase tracking-[0.26em] text-gold-soft">
                 Modern service model
@@ -32,7 +32,7 @@ export function About() {
         </FadeIn>
 
         <FadeIn delay={0.1}>
-          <p className="text-xs font-bold uppercase tracking-[0.26em] text-gold-soft">About Us</p>
+          <p className="text-xs font-bold uppercase tracking-[0.26em] text-gold">About Us</p>
           <h2 className="mt-3 font-heading text-3xl font-black uppercase tracking-wide text-ink-fg sm:text-4xl">
             Built like a premium service brand. Run like a response team.
           </h2>
@@ -54,7 +54,7 @@ export function About() {
               "Clean, respectful crews who protect your space",
             ].map((item) => (
               <li key={item} className="flex gap-3 text-ink-muted">
-                <span className="mt-1 text-gold-soft">◆</span>
+                <span className="mt-1 text-gold">◆</span>
                 {item}
               </li>
             ))}

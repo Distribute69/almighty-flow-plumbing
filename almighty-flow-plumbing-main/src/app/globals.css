@@ -1,24 +1,24 @@
 @import "tailwindcss";
 
 :root {
-  /* Surfaces — light premium base */
-  --ink-950: #f4f7fb;
-  --ink-900: #e9eef5;
-  --ink-800: #ffffff;
-  --ink-700: #d6dee9;
-  --ink-600: #9aa8b8;
-  /* Text */
-  --ink-fg: #141c28;
-  --ink-muted: #5a6778;
-  /* Brand accent */
-  --accent: #4a9fd4;
-  --accent-bright: #6bb5e4;
-  --accent-dim: #3a85b8;
-  --slate-400: #64748b;
-  --slate-300: #94a3b8;
-  /* Footer — softer navy (not pitch black) */
-  --footer-bg: #243044;
-  --footer-fg: #c8d4e3;
+  --ink-950: #07111f;
+  --ink-900: #102033;
+  --ink-800: #1a3148;
+  --ink-700: #324b63;
+  --ink-600: #60758a;
+  --ink-fg: #102033;
+  --ink-muted: #5f7184;
+  --accent: #109cf1;
+  --accent-bright: #4cc9ff;
+  --accent-dim: #0874bd;
+  --chrome: #eef3f7;
+  --chrome-dark: #a8b5c1;
+  --gold: #b68c42;
+  --gold-soft: #d9b970;
+  --slate-400: #78899a;
+  --slate-300: #d5dde5;
+  --footer-bg: #07111f;
+  --footer-fg: #d6e0ea;
 }
 
 @theme inline {
@@ -32,14 +32,20 @@
   --color-accent: var(--accent);
   --color-accent-bright: var(--accent-bright);
   --color-accent-dim: var(--accent-dim);
+  --color-chrome: var(--chrome);
+  --color-chrome-dark: var(--chrome-dark);
+  --color-gold: var(--gold);
+  --color-gold-soft: var(--gold-soft);
   --color-slate-400: var(--slate-400);
   --color-slate-300: var(--slate-300);
   --color-footer-bg: var(--footer-bg);
   --color-footer-fg: var(--footer-fg);
   --font-sans: var(--font-sans);
-  --shadow-glow: 0 4px 24px rgba(74, 159, 212, 0.2);
-  --shadow-glow-lg: 0 8px 32px rgba(74, 159, 212, 0.28);
-  --shadow-card: 0 4px 24px rgba(20, 28, 40, 0.06);
+  --font-heading: var(--font-heading);
+  --font-script: var(--font-script);
+  --shadow-glow: 0 12px 30px rgba(16, 156, 241, 0.22);
+  --shadow-glow-lg: 0 18px 44px rgba(16, 156, 241, 0.3);
+  --shadow-card: 0 24px 70px rgba(16, 32, 51, 0.12);
 }
 
 html {
@@ -47,28 +53,112 @@ html {
 }
 
 body {
-  background: var(--ink-950);
+  background:
+    radial-gradient(circle at 50% -14%, rgba(16, 156, 241, 0.16), transparent 34rem),
+    radial-gradient(circle at 12% 18%, rgba(217, 185, 112, 0.14), transparent 24rem),
+    linear-gradient(180deg, #fbfcfe 0%, #eef3f7 46%, #f8fafc 100%);
   color: var(--ink-fg);
   font-family: var(--font-sans), system-ui, sans-serif;
 }
 
 ::selection {
-  background: rgba(74, 159, 212, 0.25);
-  color: var(--ink-fg);
+  background: rgba(16, 156, 241, 0.18);
+  color: var(--ink-950);
 }
 
 .bg-grid {
   background-image:
-    linear-gradient(rgba(74, 159, 212, 0.06) 1px, transparent 1px),
-    linear-gradient(90deg, rgba(74, 159, 212, 0.06) 1px, transparent 1px);
-  background-size: 48px 48px;
+    linear-gradient(rgba(16, 32, 51, 0.045) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(16, 32, 51, 0.045) 1px, transparent 1px);
+  background-size: 56px 56px;
+}
+
+.metal-panel {
+  background:
+    linear-gradient(135deg, rgba(255, 255, 255, 0.96), rgba(247, 250, 252, 0.78) 42%, rgba(228, 236, 244, 0.9)),
+    linear-gradient(160deg, #ffffff 0%, #edf2f6 52%, #f9fbfd 100%);
+  border: 1px solid rgba(123, 143, 162, 0.2);
+  box-shadow: var(--shadow-card);
+}
+
+.chrome-text {
+  background: linear-gradient(180deg, #07111f 0%, #20344b 34%, #7d8c9b 54%, #182b42 78%, #07111f 100%);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+  filter: drop-shadow(0 10px 18px rgba(16, 32, 51, 0.12));
+}
+
+.water-text {
+  background: linear-gradient(135deg, #dff8ff 0%, #4cc9ff 28%, #109cf1 62%, #075da2 100%);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+}
+
+.waterline {
+  height: 1px;
+  background: linear-gradient(90deg, transparent, rgba(16, 156, 241, 0.45), rgba(217, 185, 112, 0.45), transparent);
+  box-shadow: 0 8px 22px rgba(16, 156, 241, 0.12);
+}
+
+.metal-texture {
+  background-image:
+    linear-gradient(115deg, rgba(255, 255, 255, 0.5), transparent 24%, rgba(16, 32, 51, 0.045) 48%, transparent 72%),
+    repeating-linear-gradient(90deg, rgba(16, 32, 51, 0.035) 0 1px, transparent 1px 8px);
+}
+
+.hero-water {
+  background:
+    linear-gradient(120deg, transparent 0 16%, rgba(76, 201, 255, 0.18) 28%, transparent 44%),
+    linear-gradient(300deg, transparent 0 42%, rgba(16, 156, 241, 0.14) 55%, transparent 70%);
+  mask-image: linear-gradient(90deg, transparent, #000 20%, #000 80%, transparent);
+}
+
+.emblem-shell {
+  background:
+    radial-gradient(circle at 50% 28%, rgba(16, 156, 241, 0.16), transparent 38%),
+    linear-gradient(145deg, rgba(255, 255, 255, 0.95), rgba(236, 242, 247, 0.86) 40%, rgba(255, 255, 255, 0.98));
+  border: 1px solid rgba(182, 140, 66, 0.28);
+  box-shadow:
+    0 0 0 1px rgba(255, 255, 255, 0.86) inset,
+    0 18px 54px rgba(16, 156, 241, 0.14),
+    0 34px 90px rgba(16, 32, 51, 0.16);
+}
+
+.badge-cut {
+  clip-path: polygon(7% 0, 93% 0, 100% 16%, 100% 84%, 93% 100%, 7% 100%, 0 84%, 0 16%);
+}
+
+.gold-arc {
+  border-top: 2px solid rgba(240, 212, 154, 0.72);
+  border-radius: 999px 999px 0 0;
+  box-shadow: 0 -8px 26px rgba(217, 185, 112, 0.12), 0 0 22px rgba(16, 156, 241, 0.12);
+}
+
+.wave-ribbon {
+  background:
+    radial-gradient(120% 160% at 0% 50%, rgba(76, 201, 255, 0.88), rgba(16, 156, 241, 0.55) 38%, transparent 39%),
+    linear-gradient(90deg, transparent, rgba(76, 201, 255, 0.92), rgba(16, 156, 241, 0.72), transparent);
+  filter: drop-shadow(0 10px 16px rgba(16, 156, 241, 0.22));
+}
+
+.bevel-button {
+  box-shadow:
+    0 1px 0 rgba(255, 255, 255, 0.45) inset,
+    0 -10px 26px rgba(2, 55, 92, 0.22) inset,
+    0 14px 34px rgba(16, 156, 241, 0.22);
+}
+
+.section-badge {
+  clip-path: polygon(1.5rem 0, calc(100% - 1.5rem) 0, 100% 1.5rem, 100% calc(100% - 1.5rem), calc(100% - 1.5rem) 100%, 1.5rem 100%, 0 calc(100% - 1.5rem), 0 1.5rem);
 }
 
 .corner-bracket {
   position: absolute;
-  width: 24px;
-  height: 24px;
-  border-color: rgba(74, 159, 212, 0.5);
+  width: 30px;
+  height: 30px;
+  border-color: rgba(182, 140, 66, 0.56);
   border-style: solid;
   pointer-events: none;
 }
@@ -86,14 +176,16 @@ body {
 }
 
 .glass-card {
-  background: linear-gradient(145deg, #ffffff 0%, #f8fafc 100%);
-  border: 1px solid var(--ink-700);
+  background:
+    linear-gradient(145deg, rgba(255, 255, 255, 0.96), rgba(242, 246, 250, 0.82)),
+    rgba(255, 255, 255, 0.86);
+  border: 1px solid rgba(123, 143, 162, 0.18);
   box-shadow: var(--shadow-card);
-  backdrop-filter: blur(12px);
+  backdrop-filter: blur(16px);
 }
 
 .glass-card:hover {
-  border-color: rgba(74, 159, 212, 0.45);
+  border-color: rgba(16, 156, 241, 0.34);
   box-shadow: var(--shadow-glow);
 }
 

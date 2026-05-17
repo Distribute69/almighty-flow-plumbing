@@ -8,9 +8,9 @@ const variants: Record<Variant, string> = {
     "bg-gradient-to-r from-accent-dim via-accent to-accent-bright text-white shadow-glow hover:shadow-glow-lg",
   secondary:
     "metal-panel text-ink-fg hover:border-accent/50",
-  ghost: "text-ink-muted hover:bg-white/5 hover:text-ink-fg",
+  ghost: "text-ink-muted hover:bg-white/70 hover:text-ink-fg",
   outline:
-    "border border-accent/55 bg-accent/5 text-accent-bright hover:bg-accent/12 hover:border-accent-bright",
+    "border border-accent/35 bg-white/86 text-accent hover:bg-accent/8 hover:border-accent",
 };
 
 type BaseProps = {
@@ -36,7 +36,16 @@ export function Button(props: LinkButtonProps | NativeButtonProps) {
   );
 
   if ("href" in props && props.href) {
-    const { href, variant: _v, className: _c, children: _ch, ...linkProps } = props;
+    const {
+      href,
+      variant: ignoredVariant,
+      className: ignoredClassName,
+      children: ignoredChildren,
+      ...linkProps
+    } = props;
+    void ignoredVariant;
+    void ignoredClassName;
+    void ignoredChildren;
     return (
       <Link href={href} className={base} {...linkProps}>
         {children}
@@ -44,8 +53,16 @@ export function Button(props: LinkButtonProps | NativeButtonProps) {
     );
   }
 
-  const { variant: _v, className: _c, children: _ch, ...buttonProps } =
+  const {
+    variant: ignoredVariant,
+    className: ignoredClassName,
+    children: ignoredChildren,
+    ...buttonProps
+  } =
     props as NativeButtonProps;
+  void ignoredVariant;
+  void ignoredClassName;
+  void ignoredChildren;
 
   return (
     <button className={base} type="button" {...buttonProps}>

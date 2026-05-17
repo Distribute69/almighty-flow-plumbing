@@ -4,7 +4,7 @@ import { serviceAreas, site } from "@/lib/site";
 
 export function ServiceArea() {
   return (
-    <section id="service-area" className="relative overflow-hidden py-24 sm:py-32">
+    <section id="service-area" className="relative overflow-hidden bg-white py-24 sm:py-32">
       <div className="pointer-events-none absolute inset-x-0 top-0 waterline" />
       <div className="mx-auto max-w-7xl px-5 sm:px-8">
         <div className="grid items-center gap-12 lg:grid-cols-2 lg:gap-20">
@@ -36,7 +36,7 @@ export function ServiceArea() {
                 {serviceAreas.map((area) => (
                   <li
                     key={area}
-                    className="flex items-center gap-2 rounded-xl border border-white/10 bg-ink-950/60 px-4 py-3 text-sm font-semibold text-ink-muted"
+                  className="flex items-center gap-2 rounded-xl border border-slate-300/80 bg-white/80 px-4 py-3 text-sm font-semibold text-ink-muted shadow-sm"
                   >
                     <span className="h-1.5 w-1.5 rounded-full bg-accent shadow-glow" />
                     {area}

@@ -31,25 +31,25 @@ export function Header() {
       className={cn(
         "fixed inset-x-0 top-0 z-50 transition-all duration-300",
         scrolled
-          ? "border-b border-ink-700/80 bg-ink-800/95 shadow-md shadow-ink-fg/5 backdrop-blur-xl"
-          : "bg-ink-950/80 backdrop-blur-sm"
+          ? "border-b border-slate-300/70 bg-white/90 shadow-lg shadow-ink-950/10 backdrop-blur-xl"
+          : "bg-white/76 backdrop-blur-sm"
       )}
     >
       <div className="mx-auto flex h-[4.5rem] max-w-7xl items-center justify-between gap-4 px-5 sm:h-20 sm:px-8">
-        <Link href="/" className="relative z-10 flex shrink-0 items-center gap-3">
+        <Link href="/" className="emblem-shell badge-cut relative z-10 flex shrink-0 items-center gap-3 px-2 py-1">
           <Image
             src="/logo.png"
             alt={site.name}
             width={160}
             height={48}
-            className="h-10 w-auto sm:h-11"
+            className="h-12 w-auto object-contain sm:h-14"
             priority
           />
         </Link>
 
         <nav
           className={cn(
-            "fixed inset-0 top-[4.5rem] flex flex-col gap-1 bg-ink-800 px-6 py-8 shadow-xl transition-all duration-300 sm:static sm:inset-auto sm:flex-row sm:items-center sm:gap-8 sm:bg-transparent sm:p-0 sm:shadow-none",
+            "fixed inset-0 top-[4.5rem] flex flex-col gap-1 bg-white px-6 py-8 shadow-xl transition-all duration-300 sm:static sm:inset-auto sm:flex-row sm:items-center sm:gap-8 sm:bg-transparent sm:p-0 sm:shadow-none",
             open
               ? "pointer-events-auto opacity-100"
               : "pointer-events-none opacity-0 sm:pointer-events-auto sm:opacity-100"
@@ -61,14 +61,14 @@ export function Header() {
               key={link.href}
               href={link.href}
               onClick={() => setOpen(false)}
-              className="rounded-lg px-2 py-3 text-base font-medium text-ink-muted transition-colors hover:text-accent sm:py-2 sm:text-sm"
+              className="rounded-lg px-2 py-3 text-base font-semibold text-ink-muted transition-colors hover:text-accent sm:py-2 sm:text-sm"
             >
               {link.label}
             </Link>
           ))}
           <a
             href={`tel:${site.phoneHref}`}
-            className="mt-4 flex items-center gap-2 rounded-lg px-2 py-3 text-accent sm:hidden"
+            className="mt-4 flex items-center gap-2 rounded-lg px-2 py-3 text-accent-bright sm:hidden"
           >
             <PhoneIcon />
             {site.phone}
@@ -78,7 +78,7 @@ export function Header() {
         <div className="relative z-10 flex items-center gap-2 sm:gap-3">
           <a
             href={`tel:${site.phoneHref}`}
-            className="hidden items-center gap-2 rounded-full px-3 py-2 text-sm font-semibold text-accent transition-colors hover:text-accent-bright lg:flex"
+            className="bevel-button hidden items-center gap-2 rounded-full border border-accent/30 bg-white px-4 py-2 text-sm font-black text-accent transition-colors hover:border-accent/60 lg:flex"
           >
             <PhoneIcon />
             {site.phone}
@@ -88,26 +88,26 @@ export function Header() {
           </Button>
           <button
             type="button"
-            className="flex h-11 w-11 flex-col items-center justify-center gap-1.5 rounded-xl border border-ink-700 bg-ink-900 sm:hidden"
+            className="flex h-11 w-11 flex-col items-center justify-center gap-1.5 rounded-xl border border-slate-300 bg-white/80 shadow-sm sm:hidden"
             aria-expanded={open}
             aria-label={open ? "Close menu" : "Open menu"}
             onClick={() => setOpen(!open)}
           >
             <span
               className={cn(
-                "h-0.5 w-5 rounded-full bg-ink-fg transition-all",
+                "h-0.5 w-5 rounded-full bg-ink-950 transition-all",
                 open && "translate-y-2 rotate-45"
               )}
             />
             <span
               className={cn(
-                "h-0.5 w-5 rounded-full bg-ink-fg transition-all",
+                "h-0.5 w-5 rounded-full bg-ink-950 transition-all",
                 open && "opacity-0"
               )}
             />
             <span
               className={cn(
-                "h-0.5 w-5 rounded-full bg-ink-fg transition-all",
+                "h-0.5 w-5 rounded-full bg-ink-950 transition-all",
                 open && "-translate-y-2 -rotate-45"
               )}
             />

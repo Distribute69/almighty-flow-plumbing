@@ -14,12 +14,13 @@ export function Reviews() {
   const prev = () => setIndex((i) => (i - 1 + reviews.length) % reviews.length);
 
   return (
-    <section id="reviews" className="relative border-y border-ink-700/60 bg-ink-900 py-24 sm:py-32">
+    <section id="reviews" className="relative overflow-hidden border-y border-slate-300/70 bg-gradient-to-b from-chrome via-white to-slate-300/35 py-24 sm:py-32">
+      <div className="pointer-events-none absolute inset-0 metal-texture opacity-20" />
       <div className="mx-auto max-w-7xl px-5 sm:px-8">
         <FadeIn>
           <SectionHeading
             eyebrow="Reviews"
-            title="Trusted by Greensboro homeowners"
+            title="Trust that feels earned before the first wrench turns"
             align="center"
             className="mx-auto"
           />
@@ -34,7 +35,7 @@ export function Reviews() {
                 animate={{ opacity: 1, x: 0 }}
                 exit={{ opacity: 0, x: -24 }}
                 transition={{ duration: 0.35 }}
-                className="glass-card rounded-2xl p-8 sm:p-12"
+                className="glass-card section-badge p-8 sm:p-12"
               >
                 <div className="flex gap-1" aria-label={`${reviews[index].rating} out of 5 stars`}>
                   {Array.from({ length: reviews[index].rating }).map((_, i) => (
@@ -44,7 +45,7 @@ export function Reviews() {
                 <p className="mt-6 text-xl leading-relaxed text-ink-fg sm:text-2xl">
                   &ldquo;{reviews[index].quote}&rdquo;
                 </p>
-                <footer className="mt-8 flex items-center justify-between border-t border-ink-700 pt-6">
+                <footer className="mt-8 flex items-center justify-between border-t border-slate-300 pt-6">
                   <div>
                     <cite className="not-italic font-bold text-ink-fg">{reviews[index].name}</cite>
                     <p className="text-sm text-ink-muted">{reviews[index].location}</p>
@@ -58,7 +59,7 @@ export function Reviews() {
             <button
               type="button"
               onClick={prev}
-              className="flex h-12 w-12 items-center justify-center rounded-full border border-ink-700 bg-ink-800 text-ink-fg transition-colors hover:border-accent hover:text-accent"
+              className="flex h-12 w-12 items-center justify-center rounded-full border border-slate-300 bg-white text-ink-fg shadow-sm transition-colors hover:border-accent hover:text-accent"
               aria-label="Previous review"
             >
               ←
@@ -70,7 +71,7 @@ export function Reviews() {
                   type="button"
                   onClick={() => setIndex(i)}
                   className={`h-2 rounded-full transition-all ${
-                    i === index ? "w-8 bg-accent" : "w-2 bg-ink-600 hover:bg-accent/50"
+                    i === index ? "w-8 bg-accent" : "w-2 bg-slate-300 hover:bg-accent/50"
                   }`}
                   aria-label={`Go to review ${i + 1}`}
                 />
@@ -79,7 +80,7 @@ export function Reviews() {
             <button
               type="button"
               onClick={next}
-              className="flex h-12 w-12 items-center justify-center rounded-full border border-ink-700 bg-ink-800 text-ink-fg transition-colors hover:border-accent hover:text-accent"
+              className="flex h-12 w-12 items-center justify-center rounded-full border border-slate-300 bg-white text-ink-fg shadow-sm transition-colors hover:border-accent hover:text-accent"
               aria-label="Next review"
             >
               →
@@ -90,7 +91,7 @@ export function Reviews() {
         <div className="mt-16 grid gap-5 sm:grid-cols-2 lg:grid-cols-4">
           {reviews.map((review, i) => (
             <FadeIn key={review.name} delay={i * 0.08}>
-              <article className="rounded-xl border border-ink-700 bg-ink-800 p-5 shadow-sm transition-colors hover:border-accent/30">
+              <article className="section-badge border border-slate-300/80 bg-white/88 p-5 shadow-sm transition-colors hover:border-accent/35">
                 <div className="flex gap-0.5">
                   {Array.from({ length: review.rating }).map((_, j) => (
                     <StarIcon key={j} className="h-3.5 w-3.5" />

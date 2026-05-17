@@ -5,12 +5,12 @@ type Variant = "primary" | "secondary" | "ghost" | "outline";
 
 const variants: Record<Variant, string> = {
   primary:
-    "bg-accent text-white shadow-glow hover:bg-accent-bright hover:shadow-glow-lg",
+    "bg-gradient-to-r from-accent-dim via-accent to-accent-bright text-white shadow-glow hover:shadow-glow-lg",
   secondary:
-    "bg-ink-800 text-ink-fg border border-ink-700 hover:border-accent/50 hover:bg-ink-900",
-  ghost: "text-ink-muted hover:bg-ink-900 hover:text-ink-fg",
+    "metal-panel text-ink-fg hover:border-accent/50",
+  ghost: "text-ink-muted hover:bg-white/70 hover:text-ink-fg",
   outline:
-    "border border-accent/60 text-accent hover:bg-accent/10 hover:border-accent",
+    "border border-accent/35 bg-white/86 text-accent hover:bg-accent/8 hover:border-accent",
 };
 
 type BaseProps = {
@@ -30,13 +30,22 @@ export function Button(props: LinkButtonProps | NativeButtonProps) {
   const { variant = "primary", className, children } = props;
 
   const base = cn(
-    "inline-flex items-center justify-center gap-2 rounded-full px-6 py-3 text-sm font-semibold tracking-wide transition-all duration-300 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-accent",
+    "bevel-button inline-flex items-center justify-center gap-2 rounded-full px-6 py-3 text-sm font-black uppercase tracking-[0.16em] transition-all duration-300 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-accent",
     variants[variant],
     className
   );
 
   if ("href" in props && props.href) {
-    const { href, variant: _v, className: _c, children: _ch, ...linkProps } = props;
+    const {
+      href,
+      variant: ignoredVariant,
+      className: ignoredClassName,
+      children: ignoredChildren,
+      ...linkProps
+    } = props;
+    void ignoredVariant;
+    void ignoredClassName;
+    void ignoredChildren;
     return (
       <Link href={href} className={base} {...linkProps}>
         {children}
@@ -44,8 +53,16 @@ export function Button(props: LinkButtonProps | NativeButtonProps) {
     );
   }
 
-  const { variant: _v, className: _c, children: _ch, ...buttonProps } =
+  const {
+    variant: ignoredVariant,
+    className: ignoredClassName,
+    children: ignoredChildren,
+    ...buttonProps
+  } =
     props as NativeButtonProps;
+  void ignoredVariant;
+  void ignoredClassName;
+  void ignoredChildren;
 
   return (
     <button className={base} type="button" {...buttonProps}>
